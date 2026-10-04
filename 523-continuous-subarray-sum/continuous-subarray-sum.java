@@ -10,7 +10,7 @@ class Solution {
                 if (i - map.get(rem) >= 2) {
                     return true;
                 }
-            } else {
+            } else {//here you need the index...you can not store at every time!!
                 map.put(rem, i);
             }
         }
