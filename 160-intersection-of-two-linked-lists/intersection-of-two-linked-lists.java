@@ -15,7 +15,7 @@ public class Solution {
         ListNode curra=headA;
         ListNode currb=headB;
         while(curra!=null){
-            currb=headB;
+            currb=headB;//noticable point!!
             while(currb!=null){
                 if(curra==currb){
                     return curra;
