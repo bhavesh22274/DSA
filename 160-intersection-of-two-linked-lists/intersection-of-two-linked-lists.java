@@ -11,16 +11,17 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        //approach-1
+        //approach-2
         ListNode curra=headA;
         ListNode currb=headB;
+        HashSet<ListNode> set=new HashSet<>();
+        while(currb!=null){
+            set.add(currb);
+            currb=currb.next;
+        }
         while(curra!=null){
-            currb=headB;//noticable point!!
-            while(currb!=null){
-                if(curra==currb){
-                    return curra;
-                }
-                currb=currb.next;
+            if(set.contains(curra)){
+                return curra;
             }
             curra=curra.next;
         }
