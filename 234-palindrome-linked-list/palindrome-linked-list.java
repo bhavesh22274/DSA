@@ -20,7 +20,7 @@ class Solution {
         //[1,2,2,1]
         int left=0;
         int right=list.size()-1;//4-1=3
-        while(left<right){
+        while(left<=right){
             if(list.get(left)!=list.get(right)){
                 return false;
             }
